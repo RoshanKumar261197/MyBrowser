@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dddddd"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/search_button"
+            android:background="@drawable/edittext"
+            android:hint="Search..."
+            android:maxLines="1"
+            android:drawableStart="@drawable/ic_public_black_24dp"
+            android:padding="5dp"
+            android:textSize="10dp"
+
+            />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/search_button"
+            android:text="search"
+
+            android:textColor="@android:color/background_light"
+            android:textSize="10dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/search_bar"
+            android:layout_marginTop="5dp">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="10dp"
+                android:layout_height="10dp" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text=""
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:orientation="horizontal"
+        >
+
+        <ProgressBar
+            android:id="@+id/progress_horizontal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:focusedByDefault="true"
+            android:background="#fff"
+            />
+
+
+        <GridLayout
+            android:id="@+id/nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/web_view"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:rowCount="1"
+            android:columnCount="3"
+            android:animationCache="true"
+            android:columnOrderPreserved="true">
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:background="#fff"
+                android:paddingHorizontal="45dp"
+                android:paddingVertical="20dp"
+                />
+            <ImageButton
+                android:id="@+id/reload"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_refresh_black_24dp"
+                android:background="#fff"
+                android:paddingHorizontal="45dp"
+                android:paddingVertical="20dp"
+                />
+            <ImageButton
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:background="#fff"
+                android:paddingHorizontal="45dp"
+                android:paddingVertical="20dp"
+                />
+
+        </GridLayout>
+    </RelativeLayout>
+
+</LinearLayout>
